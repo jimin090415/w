@@ -18,8 +18,8 @@
     <h1>If.</h1>
 
     <p>
-        다른 선택을 했다면,
-        당신은 어떤 사람이 되었을까요?
+        만약 다른 선택을 했다면,<br>
+        당신은 지금 어떤 삶을 살고 있을까요?
     </p>
 
     <button onclick="goForm()">
@@ -28,123 +28,136 @@
 
 </section>
 
-<!-- 설문 -->
+<!-- 설문 화면 -->
 <section id="form" class="screen">
 
 <div class="form-box">
 
-<h2>현재 세계의 당신</h2>
+    <h2>현재 세계의 당신</h2>
 
-<input id="name" placeholder="이름">
+    <input
+    type="text"
+    id="name"
+    placeholder="이름">
 
-<input id="age" placeholder="나이">
+    <input
+    type="text"
+    id="currentJob"
+    placeholder="현재 상태 (학생, 직장인 등)">
 
-<input id="currentJob" placeholder="현재 상태">
+    <input
+    type="text"
+    id="dream"
+    placeholder="현재 꿈">
 
-<input id="dream" placeholder="현재 꿈">
+    <input
+    type="text"
+    id="childDream"
+    placeholder="어릴 적 꿈">
 
-<input id="childDream" placeholder="어릴 적 꿈">
+    <input
+    type="text"
+    id="regret"
+    placeholder="가장 후회하는 선택">
 
-<input id="regret" placeholder="가장 후회하는 선택">
+    <input
+    type="text"
+    id="happyMoment"
+    placeholder="가장 행복했던 순간">
 
-<input id="turningPoint" placeholder="돌아가고 싶은 순간">
+    <input
+    type="text"
+    id="hobby"
+    placeholder="좋아하는 취미">
 
-<input id="happyMoment" placeholder="가장 행복했던 순간">
+    <input
+    type="text"
+    id="value"
+    placeholder="가장 중요하게 생각하는 가치">
 
-<input id="hardMoment" placeholder="가장 힘들었던 순간">
+    <input
+    type="text"
+    id="strength"
+    placeholder="내 성격의 가장 큰 장점">
 
-<input id="favoriteSubject" placeholder="좋아하는 과목">
+    <input
+    type="text"
+    id="moneyFree"
+    placeholder="돈 걱정이 없다면 하고 싶은 일">
 
-<input id="hateSubject" placeholder="싫어하는 과목">
-
-<input id="hobby" placeholder="좋아하는 취미">
-
-<input id="hateThing" placeholder="싫어하는 것">
-
-<input id="roleModel" placeholder="존경하는 사람">
-
-<input id="bestFriend" placeholder="가장 친한 친구 특징">
-
-<input id="strength" placeholder="성격 장점">
-
-<input id="weakness" placeholder="성격 단점">
-
-<input id="value" placeholder="가장 중요한 가치">
-
-<input id="moneyFree" placeholder="돈 걱정이 없다면 하고 싶은 일">
-
-<textarea
-id="freeText"
-placeholder="당신을 자유롭게 설명해주세요"
-></textarea>
-
-<button onclick="generateUniverse()">
-평행세계 생성
-</button>
+    <button onclick="generateUniverse()">
+        평행세계 생성
+    </button>
 
 </div>
 
 </section>
 
-<!-- 로딩 -->
+<!-- 로딩 화면 -->
 <section id="loading" class="screen">
 
-<div class="loader"></div>
+    <div class="loader"></div>
 
-<h2>세계선을 계산하는 중...</h2>
+    <h2>세계선을 계산하는 중...</h2>
 
-<p>
-수많은 가능성을 탐색하고 있습니다.
-</p>
+    <p>
+        수많은 가능성 속에서 또 다른 당신을 찾고 있습니다.
+    </p>
 
 </section>
 
-<!-- 결과 -->
+<!-- 결과 화면 -->
 <section id="result" class="screen">
 
 <div class="result-card">
 
-<h1 id="universeCode"></h1>
+    <h1 id="universeCode"></h1>
 
-<h2 id="futureName"></h2>
+    <h2 id="futureName"></h2>
 
-<hr>
+    <hr>
 
-<h3>📍 현재 위치</h3>
-<p id="futureCity"></p>
+    <h3>🌌 세계선 확률</h3>
+    <p id="probability"></p>
 
-<h3>💼 직업</h3>
-<p id="futureJob"></p>
+    <h3>📍 현재 위치</h3>
+    <p id="futureCity"></p>
 
-<h3>🧠 성격</h3>
-<p id="futurePersonality"></p>
+    <h3>💼 직업</h3>
+    <p id="futureJob"></p>
 
-<h3>🏠 성장 환경</h3>
-<p id="futureFamily"></p>
+    <h3>🧠 성격</h3>
+    <p id="futurePersonality"></p>
 
-<h3>👥 친구 관계</h3>
-<p id="futureFriends"></p>
+    <h3>🏠 성장 환경</h3>
+    <p id="futureFamily"></p>
 
-<h3>🎯 인생을 바꾼 선택</h3>
-<p id="futureChoice"></p>
+    <h3>👥 친구 관계</h3>
+    <p id="futureFriends"></p>
 
-<h3>📖 현재 삶</h3>
-<p id="futureLife"></p>
+    <h3>🎯 인생을 바꾼 선택</h3>
+    <p id="futureChoice"></p>
 
-<h3>✉ 평행세계의 내가 보내는 편지</h3>
-<p id="futureLetter"></p>
+    <h3>📖 현재 삶</h3>
+    <p id="futureLife"></p>
 
-<div class="buttons">
+    <h3>📅 인생 타임라인</h3>
+    <ul id="timeline"></ul>
 
-<button onclick="generateUniverse()">
-다른 세계선 보기
-</button>
+    <h3>✉ 평행세계의 내가 보내는 편지</h3>
+    <p id="futureLetter"></p>
 
-<button onclick="goHome()">
-처음으로 돌아가기
-</button>
+    <div class="buttons">
 
-</div>
+        <button onclick="generateUniverse()">
+            다른 세계선 보기
+        </button>
+
+        <button onclick="goHome()">
+            처음으로 돌아가기
+        </button>
+
+    </div>
 
 </div>
 
